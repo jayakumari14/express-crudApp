@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/read", (req, res) => {
-  res.render("index");
+  res.render("read");
 });
 
 app.listen(3000);
