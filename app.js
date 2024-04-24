@@ -9,7 +9,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.send("welcome home");
+  res.render("index");
+});
+
+app.get("/read", (req, res) => {
+  res.render("index");
 });
 
 app.listen(3000);
