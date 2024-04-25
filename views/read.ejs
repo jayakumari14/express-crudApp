@@ -14,25 +14,23 @@
       </a>
       <h1 class="text-3xl tracking-tighter mb-3 mt-3">All User</h1>
       <div class="users flex gap-3 flex-wrap">
+        <% users.forEach(function(e){%>
         <div class="user w-72 p-4 bg-teal-800 rounded-lg">
-          <div class="w-full h-52 bg-teal-900 rounded-lg"></div>
-          <h3 class="text-xl mt-3 tracking-tighter">Jaya R</h3>
-          <p class="text-teal-500">kumarijaya127@gmail.com</p>
+          <div class="w-full h-72 bg-teal-900 rounded-lg overflow-hidden">
+            <img
+              class="w-full h-full object-cover object-center"
+              src="<%=e.image%>"
+              alt=""
+            />
+          </div>
+          <h3 class="text-xl mt-3 tracking-tighter"><%= e.name%></h3>
+          <p class="text-teal-500"><%=e.email%></p>
           <div class="flex gap-3 mt-10">
             <a class="text-teal-600" href="">Edit User</a>
             <a class="text-red-400" href="">Delete User</a>
           </div>
         </div>
-
-        <div class="user w-72 p-4 bg-teal-800 rounded-lg">
-          <div class="w-full h-52 bg-teal-900 rounded-lg"></div>
-          <h3 class="text-xl mt-3 tracking-tighter">Jaya R</h3>
-          <p class="text-teal-500">kumarijaya127@gmail.com</p>
-          <div class="flex gap-3 mt-10">
-            <a class="text-teal-600" href="">Edit User</a>
-            <a class="text-red-400" href="">Delete User</a>
-          </div>
-        </div>
+        <% }) %>
       </div>
     </div>
   </body>
